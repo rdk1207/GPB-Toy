@@ -1,0 +1,42 @@
+<html>
+    <script src="https://cdn.rawgit.com/dcodeIO/protobuf.js/6.8.8/dist/protobuf.js"></script>
+    <script src="demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+    <body>
+            <div class="page">
+                <h2 style="margin-top: 0.125in; margin-bottom: 0.125in; text-align: center;">ProtoBuff JS Demo</h2>
+            </div>
+            <div class="page">
+
+                <h3>Proto3</h3>
+                <pre contenteditable id="proto"></pre>
+
+                <h3>Payload</h3>
+                <pre contenteditable id="payload">{"awesomeField": "foobar"}</pre>
+                
+                <h3>Data</h3>
+                <pre contenteditable id="data"></pre>
+            </div>
+            
+
+            <div class="page">
+                <div class="row">
+                    <input type="button" disabled onclick="decode()" id="decode" value="Decode"/>
+                    <input type="button" disabled onclick="encode()" id="encode" value="Encode"/>
+                    <input type="button" onclick="compile()" value="Compile"/>
+                    <select style="width: 4in" id="type">
+                        <option value="" disabled selected>Compile to See Message Types</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <input type="button" value="Save" onclick="save()"/>
+                    <select disabled id="example" value="Examples" type="dropdown">
+                        <option value="" disabled selected>Select an example</option>
+                    </select>
+                    <input disabled type="button" id="loadExample" value="Load Example"/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
