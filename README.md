@@ -1,4 +1,4 @@
-# ProtoBufJS-Demo
-A small demo to test out ProtoBuf.js  
+# Google Protocol Buffer Toy
+A small demo to test out Google Protocol buffers in the browser.
 Test it out [here](https://rdk1207.github.io/ProtoBufJS-Demo)  
-Uses [protobuf.js](https://github.com/dcodeIO/protobuf.js)
+Built using [protobuf.js](https://github.com/dcodeIO/protobuf.js)
