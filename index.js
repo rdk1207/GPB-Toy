@@ -36,9 +36,8 @@ var group = {
    leader: zaphod,
    members: [zaphod, arthur]
 };
-
-return group;
-//be sure to select Group as the Type`;
+//be sure to select Group as the Type
+return group;`;
 
 class CodeBox {
     constructor(htmlElement){ this.element = htmlElement; }
