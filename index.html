@@ -1,49 +1,71 @@
 <html>
     <script src="https://cdn.rawgit.com/dcodeIO/protobuf.js/6.8.8/dist/protobuf.js"></script>
     <script src="index.js"></script>
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="https://rdk1207.github.io/index.css" />
+    <link rel="stylesheet" type="text/css" href="index.css">
     <body>
-            <div class="page">
-                <h2 style="margin-top: 0.125in; margin-bottom: 0.125in; text-align: center;">ProtoBuff JS Demo</h2>
+            <div id="debug" class="card">
+                <style id="debug-stylesheet">
+                    #debug { display: none; }
+                </style>
+                <div class="header">
+                    <h3 class="middle">Debug</h3>
+                </div>
+                <div class="main">
+                    <input type="checkbox" value="borders" onchange="debug(this)"/> borders
+                </div>
+                <script src="https://rdk1207.github.io/debug.js"></script>
             </div>
-            <div class="page">
 
-                <h3>Proto3</h3>
-                <pre contenteditable id="proto"></pre>
 
-                <h3>Payload</h3>
-                <pre contenteditable id="payload">{"awesomeField": "foobar"}</pre>
-                
-                <h3>Data</h3>
-                <pre contenteditable id="data"></pre>
+            <div class="card">
+                <div class="main">
+                    <h2 style="text-align: center;">Google Protocol Buffer Toy</h2>
+                </div>
             </div>
-            
 
-            <div class="page">
-                <div class="row">
+            <div class="card">
+                <div class="main">
+                    <h3>Proto3</h3>
+                    <textarea id="proto"></textarea>
+                    <input type="button" onclick="compile()" value="Compile"/>
+                </div>
+                <div class="main">
+                    <h3>Payload</h3>
+                    <textarea contenteditable id="payload"></textarea>
                     <input type="button" disabled onclick="decode()" id="decode" value="Decode"/>
                     <input type="button" disabled onclick="encode()" id="encode" value="Encode"/>
-                    <input type="button" onclick="compile()" value="Compile"/>
+                    Type: 
                     <select style="width: 4in" id="type">
                         <option value="" disabled selected>Compile to See Message Types</option>
                     </select>
                 </div>
 
-                <div class="row">
+                <div class="main">
+                    <h3>Data (uint8)</h3>
+                    <textarea contenteditable id="data"></textarea>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="main">
                     <input type="button" value="Save" onclick="save()"/>
-                    <select disabled id="example" value="Examples" type="dropdown">
-                        <option value="" disabled selected>Select an example</option>
+                    <select id="example" value="Examples" type="dropdown" onchange="loadExample()">
+                        <option value="0" disabled selected>Select an example</option>
                     </select>
-                    <input disabled type="button" id="loadExample" value="Load Example"/>
                 </div>
             </div>
         </div>
-        <div class="page">
-            <p style="text-align: center">
-                <a href="http://www.kingan.me">kingan.me</a> | 
-                <a href="">Project Github</a> | 
-                Created with <a href="https://github.com/dcodeIO/protobuf.js">protobuf.js</a>
-            </p>
+
+        <!-- Footer -->
+        <div class="card">
+            <div class="main">
+                <p style="text-align: center; font-size: 8pt;">
+                    <a href="http://www.kingan.me" target="blank">kingan.me</a> | 
+                    <a href="https://github.com/rdk1207/GPB-Toy" target="blank">Project Github</a> | 
+                    Created with <a href="https://github.com/dcodeIO/protobuf.js" target="blank">protobuf.js</a>
+                </p>
+            </div>
         </div>
     </body>
 </html>
