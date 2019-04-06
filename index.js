@@ -39,7 +39,7 @@ var group = {
 //be sure to select Group as the Type
 return group;`;
 
-if(examples[0].proto.trim() == '' & examples[0].payload.trim() == ''){
+if(localStorage.getItem('proto') == null){
     examples[0].proto = examples[2].proto;
     examples[0].payload = examples[2].payload;
 }
