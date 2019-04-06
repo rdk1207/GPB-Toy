@@ -39,6 +39,11 @@ var group = {
 //be sure to select Group as the Type
 return group;`;
 
+if(examples[0].proto.trim() == '' & examples[0].payload.trim() == ''){
+    examples[0].proto = examples[2].proto;
+    examples[0].payload = examples[2].payload;
+}
+
 class CodeBox {
     constructor(htmlElement){ this.element = htmlElement; }
     get(){ return this.element.value; }
